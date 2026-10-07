@@ -137,3 +137,14 @@
     </script>
   </body>
 </html>
+          const active = i === activeSlide;
+          dot.classList.toggle('is-active', active);
+          dot.setAttribute('aria-selected', active);
+        });
+      };
+      carousel.querySelector('[data-carousel-prev]').addEventListener('click', () => showSlide(activeSlide - 1));
+      carousel.querySelector('[data-carousel-next]').addEventListener('click', () => showSlide(activeSlide + 1));
+      dots.forEach((dot, i) => dot.addEventListener('click', () => showSlide(i)));
+    </script>
+  </body>
+</html>
