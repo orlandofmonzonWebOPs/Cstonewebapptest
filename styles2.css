@@ -122,7 +122,7 @@ a:focus-visible,button:focus-visible { outline:3px solid #725027; outline-offset
 
 .team-carousel--profiles { grid-column:2 / 4; width:min(100%,760px); justify-self:start; }
 .team-carousel--profiles .team-photo-placeholder { height:auto; aspect-ratio:4 / 3; }
-.team-carousel--profiles .team-slide > img { display:block; width:100%; height:auto; aspect-ratio:4 / 3; object-fit:cover; }
+.team-carousel--profiles .team-slide > img { display:block; width:100%; max-width:100%; height:clamp(240px, 55vw, 420px); aspect-ratio:auto; object-fit:contain; object-position:center; background:#f8f2e9; }
 .team-carousel--profiles .team-slide[hidden] { display:none; }
 .team-carousel--profiles .team-profile-bio { padding:20px 24px; min-height:165px; }
 .team-profile-bio h3 { margin-bottom:8px; font-size:28px; }
@@ -164,3 +164,10 @@ a:focus-visible,button:focus-visible { outline:3px solid #725027; outline-offset
 .site-footer__bottom p { margin:0; font-size:10px; color:#c6d3d1; }
 @media(max-width:980px) { .site-footer { grid-template-columns:1fr 1fr; } }
 @media(max-width:520px) { .site-footer { grid-template-columns:1fr; padding:40px 7vw 24px; gap:34px; }.site-footer__bottom { flex-direction:column; } }
+
+.company-name { text-decoration:underline; text-underline-offset:6px; text-decoration-thickness:1px; }
+
+.company-name { font-size:22.5px; }
+@media(max-width:760px) { .company-name { font-size:17.5px; } }
+
+.team-carousel--profiles .team-slide > img.team-headshot { object-fit:contain; background:#f8f2e9; }
