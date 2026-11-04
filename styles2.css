@@ -171,3 +171,27 @@ a:focus-visible,button:focus-visible { outline:3px solid #725027; outline-offset
 @media(max-width:760px) { .company-name { font-size:17.5px; } }
 
 .team-carousel--profiles .team-slide > img.team-headshot { object-fit:contain; background:#f8f2e9; }
+
+.contact-panel { display:grid; grid-template-columns:1fr 1fr; gap:7vw; padding:72px 7vw; background:var(--cream); align-items:start; }
+.contact-panel__intro { padding-top:18px; }
+.contact-panel h2 { font-size:clamp(2.45rem,4.2vw,4.6rem); }
+.contact-email { overflow-wrap:anywhere; line-height:1.8; }
+.contact-form { background:#e9d6c7; border-top:3px solid #ca9b56; padding:32px; color:#3d284b; }
+.contact-form__row { display:grid; grid-template-columns:1fr 1fr; gap:18px; }
+.contact-field { display:flex; flex-direction:column; gap:9px; margin-bottom:22px; min-width:0; }
+.contact-field label { font-size:12px; font-weight:700; }
+.contact-field input,.contact-field textarea { width:100%; min-height:46px; border:1px solid rgba(61,40,75,.4); border-radius:2px; background:var(--white); color:#3d284b; padding:12px; font:400 14px/1.6 Manrope,Arial,sans-serif; }
+.contact-field textarea { resize:vertical; }
+.contact-field input:focus-visible,.contact-field textarea:focus-visible { outline:2px solid #725027; outline-offset:3px; }
+.contact-form__note { font-size:12px; line-height:1.7; margin:0 0 20px; }
+.contact-form__submit { border:1px solid #3d284b; background:#3d284b; color:var(--white); padding:14px 20px; font:600 13px Manrope,Arial,sans-serif; cursor:pointer; }
+.contact-form__submit span { color:#d5a35b; margin-left:22px; }
+.contact-form__submit:hover { background:#523663; }
+#contact-form-status:empty { display:none; }
+#contact-form-status { margin:18px 0 0; }
+@media(max-width:760px) { .contact-panel { grid-template-columns:1fr; padding:42px 7vw; gap:32px; }.contact-form { padding:24px; }.contact-form__row { grid-template-columns:1fr; gap:0; } }
+
+.contact-panel--prayer { background:#e8d6f5; border-top:1px solid var(--line); }
+.contact-panel--prayer .contact-form { background:var(--white); }
+#prayer-form-status:empty { display:none; }
+#prayer-form-status { margin:18px 0 0; }
